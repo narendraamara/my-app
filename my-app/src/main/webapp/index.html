@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome.</title>
+<style>
+    #container {
+        font-size: 18px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+		<p>Server started successfully...!</p>
+		<p id="currentDateTime"></p>
+	</div>
+
+
+	<script>
+		// JavaScript code to continuously update the current date and time
+		function updateDateTime() {
+			var currentDateTimeElement = document.getElementById("currentDateTime");
+			var currentDateTime = new Date();
+			currentDateTimeElement.textContent = currentDateTime.toLocaleString();
+		}
+
+		// Update the current date and time initially
+		updateDateTime();
+
+		// Update the current date and time every second
+		setInterval(updateDateTime, 1000);
+	</script>
+	<p>Server started successfully</p>
+
+	<h3>User Registration Interface</h3>
+	<form action="NewFile.html" method="post"><input type="submit" value="New"></form>
+	<form action="GetFile.html" method="get"><input type="submit" value="Get"></form>
+	<form action="UpdateFile.html" method="post"><input type="submit" value="Update"></form>
+	<form action="DeleteFile.html" method="post"><input type="submit" value="Delete"></form>
+</body>
+</html>
